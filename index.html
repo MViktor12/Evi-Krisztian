@@ -1,87 +1,282 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
+
 <meta charset="UTF-8">
-<title>Esküvői Meghívó</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Évi & Krisztián Esküvője</title>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
 
 <style>
+
 body{
-font-family: Arial;
+margin:0;
+font-family:Segoe UI;
+color:white;
+background:#0f2b1d;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+background-image:url("kep1.jpg");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
 text-align:center;
-background:#fdf6f6;
-color:#333;
 }
 
-header{
+.overlay{
+background:rgba(0,0,0,0.45);
 padding:60px;
-background:#e8cfcf;
-}
-
-section{
-padding:40px;
+border-radius:20px;
 }
 
 h1{
-font-size:48px;
+font-size:50px;
+color:#8b1e3f;
+margin:0;
 }
 
-h2{
-color:#a85d5d;
+.date{
+font-size:28px;
+margin-top:10px;
 }
 
-.card{
-background:white;
+.section{
+padding:80px 20px;
+text-align:center;
+}
+
+.green{
+background:#1f4d3a;
+}
+
+.bordo{
+background:#7a1e3a;
+}
+
+.gallery{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:30px;
+}
+
+.gallery img{
+width:320px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.countdown{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.box{
+background:#7a1e3a;
 padding:20px;
-margin:20px auto;
-max-width:500px;
 border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
+min-width:50px;
 }
+
+.number{
+font-size:34px;
+font-weight:bold;
+}
+
+.program{
+max-width:700px;
+margin:auto;
+}
+
+.event{
+background:white;
+color:#333;
+margin:25px;
+padding:30px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.time{
+font-size:22px;
+font-weight:bold;
+color:#7a1e3a;
+}
+
+.map{
+margin-top:20px;
+border-radius:15px;
+overflow:hidden;
+}
+
+footer{
+padding:40px;
+text-align:center;
+background:#0f2b1d;
+}
+
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>Anna & Péter</h1>
-<p>2026. Június 20.</p>
-<p>Szeretettel meghívunk az esküvőnkre!</p>
-</header>
+<section class="hero">
 
-<section>
-<h2>Helyszín</h2>
+<div class="overlay">
 
-<div class="card">
-<p><b>Ceremónia</b></p>
-<p>Falu templom</p>
-<p>15:00</p>
+<h1>Évi</h1>
+<h1>&</h1>
+<h1>Krisztián</h1>
+<div class="date">2026. Augusztus 20.</div>
+
+<div class="countdown">
+
+<div class="box">
+<div id="days" class="number"></div>
+nap
 </div>
 
-<div class="card">
-<p><b>Lakodalom</b></p>
-<p>Aranykert Rendezvényház</p>
-<p>17:00</p>
-</div>
-</section>
-
-<section>
-<h2>Program</h2>
-
-<div class="card">
-<p>15:00 – Ceremónia</p>
-<p>17:00 – Vacsora</p>
-<p>19:00 – Tánc</p>
+<div class="box">
+<div id="hours" class="number"></div>
+óra
 </div>
 
+<div class="box">
+<div id="minutes" class="number"></div>
+perc
+</div>
+
+<div class="box">
+<div id="seconds" class="number"></div>
+mp
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<section>
-<h2>Visszajelzés</h2>
+<section class="section green" data-aos="fade-up">
 
-<p>Kérjük jelezz vissza:</p>
-<p>anna@example.com</p>
+<h2>Rólunk ❤️</h2>
+
+<div class="gallery">
+
+<img src="kep1.jpg">
+<img src="kep2.jpg">
+
+</div>
 
 </section>
+
+<section class="section bordo" data-aos="fade-up">
+
+<h2>Esküvő Programja</h2>
+
+<div class="program">
+
+<div class="event">
+
+<div class="time">13:30 ⛪ Egyházi szertartás</div>
+
+<p>Nagykökényes, Római katolikus templom</p>
+
+<div class="map">
+
+<iframe
+src="https://maps.google.com/maps?q=Nagykökényes%20templom&t=&z=15&ie=UTF8&iwloc=&output=embed"
+width="100%"
+height="250"
+frameborder="0">
+</iframe>
+
+</div>
+
+</div>
+
+<div class="event">
+
+<div class="time">16:30 💍 Polgári szertartás</div>
+
+<p>Nagygombos, Vad Ló Ranch</p>
+
+<div class="map">
+
+<iframe
+src="https://maps.google.com/maps?q=Nagygombos%20Vad%20Lo%20Ranch&t=&z=15&ie=UTF8&iwloc=&output=embed"
+width="100%"
+height="250"
+frameborder="0">
+</iframe>
+
+</div>
+
+</div>
+
+<div class="event">
+
+<div class="time">19:00 🍽 Vacsora</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section green" data-aos="fade-up">
+
+<h2>Szeretettel várunk benneteket!</h2>
+
+<p>
+Ünnepeljetek velünk életünk egyik legszebb napján.
+</p>
+
+</section>
+
+<footer>
+
+Évi & Krisztián • 2026 ❤️
+
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+
+AOS.init();
+
+const weddingDate = new Date("Aug 20, 2026 13:30:00").getTime();
+
+setInterval(function(){
+
+const now = new Date().getTime();
+const distance = weddingDate - now;
+
+const days = Math.floor(distance/(1000*60*60*24));
+const hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+const minutes = Math.floor((distance%(1000*60*60))/(1000*60));
+const seconds = Math.floor((distance%(1000*60))/1000);
+
+document.getElementById("days").innerHTML = days;
+document.getElementById("hours").innerHTML = hours;
+document.getElementById("minutes").innerHTML = minutes;
+document.getElementById("seconds").innerHTML = seconds;
+
+},1000);
+
+</script>
 
 </body>
 </html>

@@ -128,6 +128,80 @@ text-align:center;
 background:#0f2b1d;
 }
 
+
+
+
+
+
+.timeline{
+position:relative;
+max-width:900px;
+margin:auto;
+padding:40px 0;
+}
+
+.timeline::after{
+content:'';
+position:absolute;
+width:4px;
+background:white;
+top:0;
+bottom:0;
+left:50%;
+transform:translateX(-50%);
+}
+
+.timeline-item{
+padding:20px 40px;
+position:relative;
+width:50%;
+box-sizing:border-box;
+}
+
+.timeline-item.left{
+left:0;
+text-align:right;
+}
+
+.timeline-item.right{
+left:50%;
+}
+
+.timeline-item .content{
+background:white;
+color:#333;
+padding:20px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+text-align: center;
+}
+
+.timeline-icon{
+position:absolute;
+top:25px;
+left:50%;
+transform:translate(-50%,0);
+background:#7a1e3a;
+color:white;
+width:40px;
+height:40px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:20px;
+border:3px solid white;
+z-index:2;
+}
+
+
+
+
+
+
+
+
+
 </style>
 </head>
 
@@ -138,9 +212,9 @@ background:#0f2b1d;
 <div class="overlay">
 
 <h1>Évi</h1>
-<h1>és</h1>
+<h1>&</h1>
 <h1>Krisztián</h1>
-<div class="date">2026. Augusztus 20.</div>
+<div class="date">2026. Augusztus 21.</div>
 
 <div class="countdown">
 
@@ -170,7 +244,7 @@ mp
 
 </section>
 
-<!--<section class="section green" data-aos="fade-up">
+<!-- <section class="section green" data-aos="fade-up">
 
 <h2>Rólunk ❤️</h2>
 
@@ -182,6 +256,63 @@ mp
 </div>
 
 </section> -->
+
+<!--- asd  -->
+<section class="section bordo">
+
+<h2>Esküvő Programja</h2>
+
+<div class="timeline">
+
+<div class="timeline-item left" data-aos="fade-right">
+
+<div class="content">
+<h3>Egyházi szertartás</h3>
+<p>13:30</p>
+<p>Nagykökényes, Római katolikus templom</p>
+</div>
+</div>
+
+<div class="timeline-item right" data-aos="fade-left">
+
+<div class="content">
+<h3>Állófogadás</h3>
+<p>15:30</p>
+</div>
+</div>
+
+<div class="timeline-item left" data-aos="fade-right">
+
+<div class="content">
+<h3>Polgári szertartás</h3>
+<p>16:30</p>
+<p>Nagygombos, Vad Ló Ranch</p>
+</div>
+</div>
+
+<div class="timeline-item right" data-aos="fade-left">
+
+<div class="content">
+<h3>Ünnepi vacsora</h3>
+<p>19:00</p>
+</div>
+</div>
+
+<div class="timeline-item left" data-aos="fade-right">
+
+<div class="content">
+<h3>Éjféli vacsora</h3>
+<p>23:30</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+
+<!---  asd  -->
+
 
 <section class="section bordo" data-aos="fade-up">
 
